@@ -137,14 +137,14 @@ ul {
     letter-spacing: 0.02em;
 }
 
-.link.item::after {
+.copy::after {
     display: block;
     content: "";
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     
-    width: 78px;
+    width: 100%;
     height: 4px;
     left: 0;
     top: 48px;
@@ -641,7 +641,6 @@ ul {
 
 .backdrop {
     position: fixed;
-    
     top: 0;
     left: 0;
     z-index: 100;
@@ -674,14 +673,19 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
+    background-color: var(--desc-color);
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: 1px solid var(--desc-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     cursor: pointer;
-    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08) ;
 }
 
 
