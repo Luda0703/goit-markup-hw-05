@@ -86,21 +86,33 @@ ul {
     color: var(--accent-color);
 }
 
+.style-nev .link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.auth-nev .link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .style-nev {
     display: flex;
     margin-left: 77px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .style-nev .copy {
     margin-left: 40px; 
 } 
 
+.style-nev .copy:first-child {
+    margin-left: 0;
+
+}
+
 .auth-nev {
     display: flex;
     margin-left: auto;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .section-header {
@@ -116,14 +128,12 @@ ul {
 }
 
 
-
-.style-nev .copy:first-child {
-    margin-left: 0;
-
-}
-
 .auth-nev .copy {
     margin-left: 40px;
+}
+
+.auth-nev .copy:first-child {
+    margin-left: 0;
 }
 
 .style-nev .item {
@@ -137,7 +147,7 @@ ul {
     letter-spacing: 0.02em;
 }
 
-.copy::after {
+.style-nev .copy:hover::after {
     display: block;
     content: "";
     background-size: contain;
@@ -352,14 +362,14 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.04em;
     font-family: "Roboto", sans-serif;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 
 .btn:hover,
 .btn:focus {
-    display: block;
+    border: 1px solid var(--accent-color);
     background-color: var(--accent-color);
     color: var(--hero-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
